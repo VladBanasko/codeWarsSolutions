@@ -1,0 +1,23 @@
+public class Solution {
+
+  public static boolean validatePin(String pin) {
+    
+   char[] num1 = String.valueOf(pin).toCharArray();
+    
+    boolean res = false;
+    
+    
+    if(num1.length == 4 || num1.length == 6 ){
+      for (int i =0; i < num1.length; i++){
+        if(Character.isDigit(num1[i])){
+        res = true;
+        } else {
+          return res = false ;
+        }
+      }
+    }
+    
+    return  res;
+  }
+
+}
