@@ -1,0 +1,17 @@
+function findShort(s){
+  
+  var words = s.split(" ");
+  
+  words = words.map(w => w.length);
+  
+  //console.log(words);
+  
+  var min = 256;
+  for(var i = 0; i < words.length; i++){
+    if(words[i]<min){
+      min = words[i];
+    }
+  }
+  
+  return min;
+}
