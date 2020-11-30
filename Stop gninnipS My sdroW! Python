@@ -1,0 +1,19 @@
+def spin_words(sentence):
+    # Your code goes here
+    arr = sentence.split()
+    #print(arr)
+    res = []
+    
+   # print(len(sentence))
+    
+    for word in arr:
+        print(len(word))
+        if len(word) > 4:
+           # print('if')
+            print(word[::-1])
+            res.append(word[::-1])
+        else:
+           # print('else')
+            print(word)
+            res.append(word)
+    return ' '.join(res)
