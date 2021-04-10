@@ -1,0 +1,7 @@
+
+def remove_url_anchor(url):
+    # TODO: complete
+    # split url according to task desired charecter
+    result = url.split("#")
+    # return first item of split list as a result  
+    return result[0]
