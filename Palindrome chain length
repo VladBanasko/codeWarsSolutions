@@ -1,0 +1,15 @@
+def palindrome_chain_length(n):
+    # parameter n is a positive integer
+    # your function should return the number of steps
+    
+    steps = 0
+    
+    reversed = int(str(n)[::-1])
+    
+    while n != reversed:
+        steps = steps + 1
+        n = n + reversed
+        reversed = int(str(n)[::-1])
+    
+    return steps
+    
