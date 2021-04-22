@@ -1,0 +1,12 @@
+def solution(nums):
+    
+        try:    
+            x = len(nums)
+          
+            if x == 0:
+                return nums
+            else:    
+                return sorted(nums)
+        except:
+            nums = []
+            return nums
