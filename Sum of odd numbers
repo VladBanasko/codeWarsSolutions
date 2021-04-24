@@ -1,0 +1,10 @@
+
+def row_sum_odd_numbers(n):
+    #your code here
+    
+    first  = n**2 - (n-1)
+    
+    return sum(range(first,first + n * 2, 2))
+   
+    
+    
