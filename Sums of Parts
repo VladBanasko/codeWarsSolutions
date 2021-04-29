@@ -1,0 +1,12 @@
+def parts_sums(ls):
+    # your code
+    
+    summ = 0
+    resarr = [0]
+    
+    for i in ls[::-1]:
+        summ +=i
+       
+        resarr.append(summ)
+    return resarr[::-1]
+        
