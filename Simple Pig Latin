@@ -1,0 +1,23 @@
+def pig_it(text):
+    #your code here
+    #split text to array of words
+    arr = text.split(' ')
+    
+    strres = " "
+    
+    res = []
+    #looping through array of words and changing words according to instructions
+    # and adding to new array
+    for i in arr:
+        #checking if item of array is word
+        if i.isalpha():
+            text = i[1:]
+            firstletter = i[0]
+            newtext = text+firstletter+'ay'
+            res.append(newtext)
+        # checking if item of array is symbol 
+        else:
+            res.append(i)
+            continue
+    return strres.join(res)
+       
