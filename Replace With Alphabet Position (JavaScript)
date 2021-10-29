@@ -1,0 +1,19 @@
+function alphabetPosition(text) {
+  
+  result = ''
+  alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  
+  arr = text.split('');
+  
+  const lowercased = arr.map(arr => arr.toLowerCase());
+  
+  
+  for(let i =0;i<lowercased.length;i++){
+    if(alphabet.includes(lowercased[i])){
+      result += alphabet.indexOf(lowercased[i])+1 + " "
+    }
+  }
+  
+  
+  return result.trim();
+}
