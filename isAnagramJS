@@ -1,0 +1,14 @@
+var isAnagram = function(test, original) {
+  
+  var result = false;
+  var firstsorted = test.toLowerCase().split('').sort();
+  var secondsorted = original.toLowerCase().split('').sort();
+  
+  if (JSON.stringify(firstsorted) == JSON.stringify(secondsorted)){
+    
+    return result = true;
+  } else {
+    return result;
+  }
+  
+};
