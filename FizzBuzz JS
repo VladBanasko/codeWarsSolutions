@@ -1,0 +1,28 @@
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var fizzBuzz = function(n) {
+    
+    var i = 1;
+    var list = [];
+    
+    while (i <= n) {
+        if ((i % 3 == 0) && (i % 5 == 0)){
+            list.push("FizzBuzz");
+            i++;
+        } else if (i % 3 == 0){
+            list.push("Fizz");
+            i++;
+        } else if(i % 5 == 0){
+            list.push("Buzz");
+            i++;
+        } else {
+            list.push(i.toString())
+            i++;
+        }
+        
+    }
+    return list;
+    
+};
