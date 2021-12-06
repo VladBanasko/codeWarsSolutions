@@ -1,0 +1,36 @@
+function list(names){
+  //your code here
+  var length = names.length;
+  
+  var list = [];
+  var result = '';
+  
+  if(length >= 3){
+    for(var i = 0;i<length-2;i++){
+   
+      list.push(names[i].name);
+    } 
+    
+    var text = list.join(', ');
+   
+ 
+    result =  result.concat(result, text).concat(result,", ").concat(result, names[length-2].name).concat(result, " & ").concat(result, names[length-1].name);
+
+    
+    return result;
+   
+    
+  } else if(length == 2){
+    
+    result =  result.concat(result , names[length-2].name).concat(result, " & ").concat(result, names[length-1].name);    
+  
+    return result;
+    
+  } else if (length ==1) {
+    return result.concat(result, names[0].name);
+   
+  } else {
+     return result;
+  }
+  
+  
