@@ -1,0 +1,23 @@
+function capitalize(s){
+  
+  var first = [];
+  var second = [];
+  
+  var result = [];
+  
+  var list = s.split('');
+  for (var i = 0; i<list.length;i++){
+    if(i % 2 ==0){
+      first.push(list[i].toUpperCase());
+      second.push(list[i]);
+    } else if(i % 2!=0){
+      first.push(list[i]);
+      second.push(list[i].toUpperCase());
+    }
+  }
+  
+  result.push(first.join(''));
+  result.push(second.join(''));
+  
+  return result;
+};
