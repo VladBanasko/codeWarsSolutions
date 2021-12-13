@@ -1,0 +1,45 @@
+function productFib(prod){
+  
+  var nums = 99;
+   var fib = [0, 1];
+  var data = [];
+  
+  for(let i = 2; i <= nums; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2]; 
+    data.push(fib[i]);
+  }
+  
+
+  
+  var fib1;
+  var fib2;
+  var bool = false;
+  
+  var result = [];
+  
+ 
+  for(var i = 0;i<data.length;i++){
+    
+    if(data[i]*data[i+1]==prod){
+      fib1 = data[i];
+      fib2 = data[i+1];
+      bool = true;
+    } else if ((data[i]*data[i-1]<prod) && (data[i]*data[i+1]>prod)){
+      fib1 = data[i];
+      fib2 = data[i+1];
+      bool = false;
+      
+    }
+
+  }
+   result.push(fib1);
+   result.push(fib2);
+   result.push(bool);
+
+  
+  console.log(result);
+  
+  return result;
+  
+  // ...
+}
