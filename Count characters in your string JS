@@ -1,0 +1,35 @@
+function count (string) {  
+  // The function code should be here
+  
+  var map1 = new Map();
+  
+  var letters = string.split('');
+  
+  if(letters.length==0){
+    return {};
+  }
+  
+  var res = {};
+  
+  for (var i = 0;i<letters.length;i++){
+    if(map1.has(letters[i])){
+      map1.set(letters[i],map1.get(letters[i])+1);
+      
+    } else {
+      map1.set(letters[i],1);
+    }   
+  }
+  var resu = "{ ";
+  
+ map1.forEach(function(value, key) {
+   resu +=  key  + ": " + value + ", ";
+  });
+  
+  var resu1 = resu.slice( 0, resu.length-2);
+  
+
+  resu1+= " }";
+  
+
+  return resu1;
+}
