@@ -1,0 +1,25 @@
+function tribonacci(signature,n){
+  //your code here
+  
+  if (n==0){
+    return [];
+  }
+  var res = [n];
+  
+  res[0]= signature[0];
+  res[1]= signature[1];
+  res[2]= signature[2];
+  
+  if(n<3){
+   
+     return res.splice(0,1);
+    
+  }
+  
+  
+  for(var i = 3;i < n; i++){
+    res[i]= res[i-1]+res[i-2]+res[i-3];
+  }
+  return res;
+  
+}
