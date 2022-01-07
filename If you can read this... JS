@@ -1,0 +1,34 @@
+function to_nato(words) {
+  
+  
+	// Go code
+ 
+  
+  var wordsArr  = words.split('');
+  var wordsArr1 = wordsArr.map(letter => letter.toLowerCase());
+  
+ 
+  
+  wordsArr1 = wordsArr1.filter(function(str) {
+    return /\S/.test(str);
+  }) 
+  
+  
+  var res  = '';
+  
+  
+  for (var i = 0;i<wordsArr1.length;i++){
+    
+//   
+    
+    if(NATO[wordsArr1[i]] != null){
+      res+=(NATO[wordsArr1[i]]);
+      res+=(" ");
+    } else {
+      res+=(wordsArr1[i]);
+      res+=(" ");
+    }
+  }
+  
+  return res.trim();
+}
